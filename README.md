@@ -8,6 +8,7 @@ In my design for the Chess game, I followed the clean code, SOLID, and OOP princ
 
 PieceColor enum:
 Holds the colors of the pieces to be used in the game.
+
 ![image](https://user-images.githubusercontent.com/81943021/208049581-99c1e991-5870-4348-b765-e20b2d7895cc.png)
 
 
