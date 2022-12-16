@@ -3,12 +3,14 @@ ChessGame using OOP and clean code principles and design patterns
 Chess assignment
 Done by:
 Ramzi Alyahya
-Instructors:
-Motasim Aldiab
-Fahed Jubair
+
 In my design for the Chess game, I followed the clean code, SOLID, and OOP principles as much as I could, while incorporating some design patterns in order to create a maintainable and extendable piece of software, in general my design aims to achieve a high degree of abstraction by decomposing the design into smaller simple classes and achieves encapsulation by always minimizing accessibility of fields and methods that we don’t want to be exposed, using setter methods sparingly, and judiciously returning copies of data in getter methods.
+
 PieceColor enum:
-Holds the colors of the pieces to used in the game.
+Holds the colors of the pieces to be used in the game.
+![image](https://user-images.githubusercontent.com/81943021/208049581-99c1e991-5870-4348-b765-e20b2d7895cc.png)
+
+
 The Pieces:
 I used an abstract base class called Piece to represent pieces on the boar, each subclass of Piece has its own rules regarding how it can move, and some of the pieces have similar moving patterns such as queen and rook, which’s why I chose use the strategy pattern to validate the movements of each piece, each piece holds a list of MoveValidator objects so each piece can use combination of these objects to define it’s movements, where each subclass of MoveValidator checks the validity of a certain type of movement.
 This design ensures a high level of abstraction and ensures separation of concerns and single responsibility principle, due to using strategy pattern, and eliminates code redundancy by defining specific types of moves as strategies such as vertical, horizontal move validators so pieces and use any combination of them.
